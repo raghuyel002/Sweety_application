@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sweety application">
+  <parameter name="selenium.host" value="localhost" />
+  <parameter name="selenium.port" value="3737" />
+  <parameter name="selenium.browser" value="firefox" />
+  <parameter name="selenium.url" value="http://damp-sands-8561.herokuapp.com" />
+ 
+  <test name="Entering the blood readings and Verifying the report" preserve-order="true">
+    <classes>
+      <class name="sweety_Tests.Sweety">
+        <methods>
+          <include name="enterBloodEntryAndVerifyDailyReport" />
+          <include name="enterBloodEntryAndVerifyMonthlyReport" />
+          <include name="enterBloodValuesMoreThanFourTimesInADay" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
